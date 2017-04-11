@@ -379,7 +379,13 @@ namespace Stateless
             return configuration;
         }
 
-        void SaveTriggerConfiguration(TriggerWithParameters trigger)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="trigger"></param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public void SaveTriggerConfiguration(TriggerWithParameters trigger)
         {
             if (_triggerConfiguration.ContainsKey(trigger.Trigger))
                 throw new InvalidOperationException(
